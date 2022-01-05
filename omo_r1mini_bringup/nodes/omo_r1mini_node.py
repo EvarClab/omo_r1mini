@@ -226,7 +226,7 @@ class OMOR1miniNode:
         self.joint.joint_vel = [wheel_ang_vel_left, wheel_ang_vel_right]
 
         joint_states = JointState()
-        joint_states.header.frame_id = "base_link"
+        joint_states.header.frame_id = "base_footprint"
         joint_states.header.stamp = rospy.Time.now()
         joint_states.name = self.joint.joint_name
         joint_states.position = self.joint.joint_pos
